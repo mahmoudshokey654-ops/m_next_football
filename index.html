@@ -23,15 +23,16 @@
     header {
       background-color: rgba(0, 0, 0, 0.85);
       color: #ffcc00;
-      padding: 10px 25px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+      flex-wrap: wrap;
     }
 
     header img {
-      height: 90px;
+      height: 70px;
       transition: transform 0.3s ease;
     }
 
@@ -40,7 +41,7 @@
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0;
       line-height: 1.2;
       text-shadow: 0 0 5px #ffcc00;
@@ -48,11 +49,11 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 80px 15px;
     }
 
     .hero h2 {
-      font-size: 3rem;
+      font-size: 2rem;
       color: #ffcc00;
       margin-bottom: 15px;
       animation: popIn 1.2s ease-out;
@@ -70,17 +71,17 @@
     }
 
     .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 25px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
     }
 
     .cta-btn {
       background-color: #ffcc00;
       color: #000;
-      padding: 14px 35px;
-      font-size: 1.1rem;
+      padding: 12px 25px;
+      font-size: 1rem;
       border: none;
-      border-radius: 35px;
+      border-radius: 30px;
       cursor: pointer;
       text-decoration: none;
       font-weight: bold;
@@ -91,8 +92,7 @@
 
     .cta-btn:hover {
       background-color: #fff;
-      color: #000;
-      transform: scale(1.08);
+      transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     }
 
@@ -103,24 +103,24 @@
     }
 
     section {
-      padding: 60px 20px;
+      padding: 50px 15px;
       text-align: center;
       background-color: rgba(0,0,0,0.6);
       border-radius: 20px;
-      margin: 20px;
+      margin: 15px;
       box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
 
     .feature {
       background-color: rgba(255, 204, 0, 0.1);
       border-radius: 15px;
-      padding: 20px;
+      padding: 15px;
       box-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -139,44 +139,44 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 25px;
+      gap: 15px;
       flex-wrap: wrap;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .gallery img {
-      width: 400px;
-      height: 270px;
-      object-fit: cover;
-      border-radius: 18px;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 15px;
       box-shadow: 0 0 15px rgba(255,204,0,0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px rgba(255,204,0,0.9);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,204,0,0.9);
     }
 
     /* ====== نموذج التواصل ====== */
     form {
-      margin-top: 40px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       animation: fadeInUp 1s ease;
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     input, textarea {
-      width: 80%;
-      max-width: 450px;
-      padding: 12px;
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
       border-radius: 10px;
       border: none;
       outline: none;
@@ -211,18 +211,26 @@
     iframe {
       border: none;
       width: 100%;
-      height: 350px;
+      height: 300px;
       border-radius: 15px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     footer {
       background-color: #000;
       color: #ffcc00;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
       font-weight: bold;
       box-shadow: 0 -3px 10px rgba(255, 204, 0, 0.4);
+    }
+
+    /* ====== Media Queries للشاشات الصغيرة ====== */
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 1.5rem; }
+      .hero p { font-size: 1rem; }
+      header h1 { font-size: 1.2rem; }
+      .features { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -230,7 +238,7 @@
 <body>
   <header>
     <img src="resize_image_68ffd8b8d085c.png" alt="شعار الأكاديمية">
-    <h1>أكاديمية نِكِست<br><span style="font-size:1.1rem">Next Football Club</span></h1>
+    <h1>أكاديمية نِكِست<br><span style="font-size:1rem">Next Football Club</span></h1>
   </header>
 
   <div class="hero">
@@ -274,3 +282,4 @@
   </footer>
 </body>
 </html>
+
